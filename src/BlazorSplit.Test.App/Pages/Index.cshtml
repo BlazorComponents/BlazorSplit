@@ -5,13 +5,12 @@
 
 Welcome to your new app.
 
-
+@(sizes?.FirstOrDefault() ?? 0)
 <div style="width: 500px; height: 500px;">
-    <Split Sizes="new float[] {20, 80}">
+    <Split OnDragEnd="@Test">
         <SplitArea>
             Test1
         </SplitArea>
-
         <SplitArea>
             Test2
         </SplitArea>
@@ -19,15 +18,15 @@ Welcome to your new app.
 
 </div>
 
-<div style="width: 500px; height: 500px;">
-    <Split Direction="@SplitDirection.Vertical">
-        <SplitArea>
-            Test1
-        </SplitArea>
+@functions
+{
+    float[] sizes;
 
-        <SplitArea>
-            Test2
-        </SplitArea>
-    </Split>
 
-</div>
+    void Test(float[] sizes)
+    {
+        this.sizes = sizes;
+        this.StateHasChanged();
+    }
+
+}

@@ -1,45 +1,29 @@
 ﻿var blazorSplit = {
     splitRef: {},
-    splitAreaRef: {},
-    interopHelpers: {},
 
-    init: function(data, interopHelper) {
-        var options = data.options;
-
-        blazorSplit.interopHelpers[data.id] = interopHelper;
-        options.onDrag = function() {
-            interopHelper.invokeMethodAsync("OnDrag");
-        };
-
-        options.onDragStart = function(sizes) {
-            interopHelper.invokeMethodAsync("OnDragStart", sizes);
-        };
-
-        options.onDragEnd = function(sizes) {
-            interopHelper.invokeMethodAsync("OnDragEnd", sizes);
-        };
-
-
-        var splitEl = document.getElementById(data.id);
-        var elements = [];
-        var ids = [];
-        
-        for (var i = 0; i < splitEl.children.length; i++) {
-            var areaEl = splitEl.children[i];
-            elements.push("#" + areaEl.id);
-            ids.push(areaEl.id);
-            blazorSplit.splitAreaRef[areaEl.id] = splitEl.id;
+    init: function (interopHelper, id, elements, options, initOptions) {
+        if (initOptions.onDrag) {
+            options.onDrag = function() {
+                interopHelper.invokeMethodAsync("OnDrag");
+            };
         }
-        try {
-            blazorSplit.splitRef[data.id] = window.Split(elements, options);
-        } catch (e) {
 
+        if (initOptions.onDragStart) {
+            options.onDragStart = function(sizes) {
+                interopHelper.invokeMethodAsync("OnDragStart", sizes);
+            };
+        }
+
+        if (initOptions.onDragEnd) {
+            options.onDragEnd = function(sizes) {
+                interopHelper.invokeMethodAsync("OnDragEnd", sizes);
+            };
+        }
+
+        try {
+            blazorSplit.splitRef[id] = window.Split(elements, options);
+        } catch (e) {
             debugger;
         }
-
-        return {
-            elements: elements
-        };
-
     }
 };

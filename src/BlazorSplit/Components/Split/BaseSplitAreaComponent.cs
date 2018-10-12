@@ -4,14 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Blazor;
 using Microsoft.AspNetCore.Blazor.Components;
+using Microsoft.AspNetCore.Blazor.RenderTree;
 
 namespace BlazorSplit.Components.Split
 {
     public abstract class BaseSplitAreaComponent : BlazorComponent
     {
-        public string Id = "id_"+Guid.NewGuid().ToString();
-        private float _size;
-
         [Parameter]
         public float Size
         {
@@ -20,7 +18,18 @@ namespace BlazorSplit.Components.Split
         }
 
         [Parameter]
+        public int? MinSize { get; set; }
+
+        [Parameter]
         public RenderFragment ChildContent { get; set; }
+
+        
+
+
+        public string Id = "id_" + Guid.NewGuid().ToString();
+
+        private float _size;
+        internal BaseSplitComponent parentSplit;
 
         protected override void OnAfterRender()
         {

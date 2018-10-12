@@ -9,13 +9,17 @@ namespace BlazorSplit
 {
     public static class SplitInterop
     {
-        public static async Task<SplitInitResponse> InitAsync(SplitInitRequest request,
-            SplitInteropHelper interopHelper)
+        public static async Task InitAsync(SplitInteropHelper interopHelper, string id, string[] elements,
+            SplitOptions options, SplitInitOptions initOptions)
         {
-            return await JSRuntime.Current.InvokeAsync<SplitInitResponse>(
+            await JSRuntime.Current.InvokeAsync<object>(
                 "blazorSplit.init",
-                request,
-                new DotNetObjectRef(interopHelper));
+                new DotNetObjectRef(interopHelper),
+                id,
+                elements,
+                options,
+                initOptions
+            );
         }
     }
 }
