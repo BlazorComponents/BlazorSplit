@@ -8,6 +8,9 @@ If you like the idea of this repo leave your feedback as an issue or star the re
 
 Currently, starting with a simple [Split.Js](https://split.js.org/) implementation. 
 
+## Demo
+https://blazorcomponents.github.io/BlazorSplit/
+
 
 ## Prerequisites
 
