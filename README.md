@@ -41,12 +41,13 @@ dotnet add package BlazorSplit
 
 1. In cshtml file add this:
 
-```<Split>
-        <SplitArea>
-            Test1
-        </SplitArea>
-        <SplitArea>
-            Test2
-        </SplitArea>
-    </Split>
+```
+	<Split>
+	        <SplitArea>
+	            Test1
+	        </SplitArea>
+        	<SplitArea>
+	            Test2
+        	</SplitArea>
+	</Split>
 ```
