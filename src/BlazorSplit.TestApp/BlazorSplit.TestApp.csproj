@@ -5,6 +5,7 @@
     <RunCommand>dotnet</RunCommand>
     <RunArguments>blazor serve</RunArguments>
     <LangVersion>7.3</LangVersion>
+    <Version>0.3.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
