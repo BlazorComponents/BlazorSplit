@@ -8,12 +8,15 @@
     <LangVersion>7.3</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Authors>Vladimir Samoilenko</Authors>
     <Company>BlazorComponents</Company>
-    <Description>Split and SplitArea for Blazor</Description>
+    <Description>Split and SplitArea for Blazor, Splitter</Description>
     <PackageProjectUrl>https://github.com/BlazorComponents/BlazorSplit</PackageProjectUrl>
     <RepositoryUrl>https://github.com/BlazorComponents/BlazorSplit</RepositoryUrl>
+    <Copyright>Vladimir Samoilenko</Copyright>
+    <PackageLicenseUrl>https://github.com/BlazorComponents/BlazorSplit/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>blazor, split, splitarea, splitter</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

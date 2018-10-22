@@ -17,6 +17,7 @@ namespace BlazorSplit.Components.Split
             set => _size = value;
         }
 
+        
         [Parameter]
         public int? MinSize { get; set; }
 
@@ -33,6 +34,7 @@ namespace BlazorSplit.Components.Split
 
         protected override void OnAfterRender()
         {
+            
         }
     }
 }

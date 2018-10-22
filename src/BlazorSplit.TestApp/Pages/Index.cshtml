@@ -1,17 +1,124 @@
 ﻿@page "/"
 
-<h1>BlazorSplit Demo</h1>
+<h1>BlazorSplit</h1>
 
-Welcome to your new app.
-
-<div style="width: 500px; height: 500px">
+<div style="width: 100%; height: 500px">
     <Split>
         <SplitArea>
-            <div style="height: 100%; width: 100%; background: red;"></div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </SplitArea>
-        
+
         <SplitArea>
-            <div style="height: 100%; width: 100%; background: green;"></div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </SplitArea>
     </Split>
 </div>
+
+
+<h1>Documentation</h1>
+<h3>Split</h3>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Options</th>
+        <th scope="col">Type</th>
+        <th scope="col">Default</th>
+        <th scope="col">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>Direction</th>
+        <td>enum SplitDirection {Horizontal,Vertical}</td>
+        <td>Horizontal</td>
+        <td>Direction to split: horizontal or vertical.</td>
+    </tr>
+    <tr>
+        <th>MinSize</th>
+        <td>int</td>
+        <td>0</td>
+        <td>Default minimum size of all splitAreas.</td>
+    </tr>
+    <tr>
+        <th>ExpanedToMin</th>
+        <td>bool</td>
+        <td>false</td>
+        <td>Grow initial sizes to minSize</td>
+    </tr>
+    <tr>
+        <th>GutterSize</th>
+        <td>int</td>
+        <td>10</td>
+        <td>Gutter size in pixels</td>
+    </tr>
+    <tr>
+        <th>GutterAlign</th>
+        <td>enum SplitGutterAlign {Center,Start,End}</td>
+        <td>Center</td>
+        <td>Gutter alignment between elements.</td>
+    </tr>
+    <tr>
+        <th>SnapOffset</th>
+        <td>int</td>
+        <td>30</td>
+        <td>Snap to minimum size offset in pixels</td>
+    </tr>
+    <tr>
+        <th>DragInterval</th>
+        <td>int</td>
+        <td>1</td>
+        <td>Number of pixels to drag.</td>
+    </tr>
+    <tr>
+        <th>Cursor</th>
+        <td>string</td>
+        <td>null</td>
+        <td>Cursor to display while dragging.</td>
+    </tr>
+    <tr>
+        <th>OnDrag</th>
+        <td>Action</td>
+        <td></td>
+        <td>Callback on drag.</td>
+    </tr>
+    <tr>
+        <th>OnDragStart</th>
+        <td>Action[float[]]</td>
+        <td></td>
+        <td>Callback on drag start.</td>
+    </tr>
+    <tr>
+        <th>OnDragEnd</th>
+        <td>Action[float[]]</td>
+        <td></td>
+        <td>Callback on drag end.</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<h3>SplitArea</h3>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Options</th>
+        <th scope="col">Type</th>
+        <th scope="col">Default</th>
+        <th scope="col">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>Size</th>
+        <td>float</td>
+        <td>0</td>
+        <td>Initial size of area in percents.</td>
+    </tr>
+    <tr>
+        <th>MinSize</th>
+        <td>int?</td>
+        <td>null</td>
+        <td>Minimum size of area.</td>
+    </tr>
+    </tbody>
+</table>

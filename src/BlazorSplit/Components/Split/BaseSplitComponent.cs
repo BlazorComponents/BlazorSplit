@@ -31,7 +31,7 @@ namespace BlazorSplit.Components.Split
         public int SnapOffset { get; set; } = 30;
 
         [Parameter]
-        public int DragInterval { get; set; } = 0;
+        public int DragInterval { get; set; } = 1;
 
         [Parameter]
         public string Cursor { get; set; } = null;
