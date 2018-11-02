@@ -1,5 +1,7 @@
 ## BlazorSplit
 
+![BlazorSplit](wiki/demo.gif)
+
 ```
 Note: Just as Blazor, this repo is also experimental.
 ```
